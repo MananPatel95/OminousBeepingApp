@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.backgroundColor = .red
         imageView.clipsToBounds = false
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .center
     }
     
     
@@ -78,8 +78,8 @@ class ViewController: UIViewController {
             
             let pulsatingLayer = CAShapeLayer()
             pulsatingLayer.path = circularPath.cgPath
-            pulsatingLayer.lineWidth = 40
-            pulsatingLayer.fillColor = UIColor.red.cgColor
+            pulsatingLayer.lineWidth = 60
+            pulsatingLayer.fillColor = UIColor.clear.cgColor
             pulsatingLayer.lineCap = .round
             pulsatingLayer.position = CGPoint(x: imageView.frame.width/2, y: imageView.frame.size.width/2)
             imageView.layer.addSublayer(pulsatingLayer)
